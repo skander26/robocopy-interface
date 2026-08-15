@@ -55,6 +55,10 @@ class RobocopyGUI(ctk.CTk):
         self.geometry("900x750")
         self.minsize(800, 700)
 
+        # Set window icon if it exists
+        if os.path.exists("app_icon.ico"):
+            self.iconbitmap("app_icon.ico")
+
         self.process = None
         self.is_running = False
 
